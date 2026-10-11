@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hisar Doorstep Car Care | 24x7 Mobile Car Wash & Detailing</title>
+  
+  <!-- Inter & Plus Jakarta Sans Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              400: '#38bdf8',
+              500: '#0284c7',
+              600: '#0369a1',
+              accent: '#06b6d4',
+              glow: '#00f2fe'
+            },
+            dark: {
+              900: '#0b0f17',
+              850: '#111827',
+              800: '#151d2f',
+              700: '#1e293b'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom styling for glassmorphism and range inputs */
+    .glass-card {
+      background: rgba(21, 29, 47, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card-hover:hover {
+      border-color: rgba(6, 182, 212, 0.4);
+      box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.2);
+    }
+    .neon-text-glow {
+      text-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+    }
+    /* Comparison Slider */
+    .comparison-container {
+      position: relative;
+      overflow: hidden;
+      user-select: none;
+    }
+    .comparison-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body class="bg-dark-900 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white pb-20 md:pb-0">
+
+  <!-- Top Notification Bar -->
+  <aside aria-label="Announcement" class="bg-gradient-to-r from-cyan-950 via-dark-850 to-blue-950 border-b border-cyan-800/40 text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span class="font-semibold text-cyan-300">NOW ACTIVE IN HISAR:</span>
+        <span class="hidden sm:inline text-slate-300">Book 3 or 4+ Cars together & Get <strong class="text-emerald-400 font-bold underline">100% FREE Visit Fee</strong>!</span>
+        <span class="sm:hidden text-slate-300">3+ Cars = <strong>FREE Visit Fee</strong>!</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <span class="text-slate-400 hidden md:inline"><i class="fa-solid fa-bolt text-amber-400 mr-1"></i> Self-Sufficient Van (Own Water & Generator)</span>
+        <a href="tel:+919876543210" class="text-cyan-400 font-semibold hover:text-cyan-300 flex items-center gap-1">
+          <i class="fa-solid fa-phone text-xs"></i> 24x7 Helpline
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Navigation -->
+  <nav class="sticky top-0 z-40 bg-dark-900/90 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
+      <a href="#" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
+          <i class="fa-solid fa-spray-can-sparkles text-xl"></i>
+        </div>
+        <div>
+          <span class="text-lg font-bold font-display tracking-tight text-white flex items-center gap-1.5">
+            HISAR CAR CARE
+            <span class="text-[10px] uppercase tracking-wider bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 px-1.5 py-0.5 rounded font-mono">24x7</span>
+          </span>
+          <p class="text-[11px] text-slate-400">100% Paint-Safe Doorstep Detailing</p>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
+        <a href="#services" class="hover:text-cyan-400 transition-colors">Pricing & Plans</a>
+        <a href="#booking-calculator" class="hover:text-cyan-400 transition-colors">Cost Calculator</a>
+        <a href="#before-after" class="hover:text-cyan-400 transition-colors">Results</a>
+        <a href="#coverage" class="hover:text-cyan-400 transition-colors">Hisar Sectors</a>
+        <a href="#faqs" class="hover:text-cyan-400 transition-colors">FAQs</a>
+      </div>
+
+      <!-- Action CTA -->
+      <div class="flex items-center space-x-3">
+        <a href="#booking-calculator" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold text-xs md:text-sm px-4 py-2.5 rounded-lg shadow-lg shadow-cyan-500/25 transition-all">
+          <i class="fa-solid fa-calendar-check"></i>
+          <span>Book Wash Now</span>
+        </a>
+        <a href="https://wa.me/919876543210?text=Hi%20Hisar%20Car%20Care,%20I%20want%20to%20book%20a%20doorstep%20car%20wash." target="_blank" class="p-2.5 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/30 transition-colors" title="Chat on WhatsApp">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden pt-8 pb-16 md:pt-16 md:pb-24">
+    <!-- Ambient Background Lighting -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-10 right-10 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <!-- Tag Pill -->
+          <div class="inline-flex items-center gap-2 bg-dark-800 border border-cyan-500/30 px-3.5 py-1.5 rounded-full text-xs font-medium text-cyan-300">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            Zero Waiting Ramps • Direct to Your Porch in Hisar
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-display tracking-tight text-white leading-tight">
+            24x7 Doorstep Car Wash & Detailing in <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Hisar</span>
+          </h1>
+
+          <p class="text-slate-300 text-base md:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            No 2-hour lines at Auto Market. No swirl-mark roadside rags. Our fully equipped mobile van brings its own <strong class="text-white">water tank, pressure washer & power generator</strong> straight to your bungalow, hospital, or office gate.
+          </p>
+
+          <!-- Core Value Proposition Badges -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+            <div class="bg-dark-800/90 border border-slate-700/80 rounded-xl p-3 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-ban text-sm"></i>
+              </div>
+              <div class="text-left">
+                <div class="text-xs font-bold text-white">Zero Mechanics</div>
+                <div class="text-[11px] text-slate-400">100% Pure Aesthetic Wash</div>
+              </div>
+            </div>
+
+            <div class="bg-dark-800/90 border border-slate-700/80 rounded-xl p-3 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-plug-circle-bolt text-sm"></i>
+              </div>
+              <div class="text-left">
+                <div class="text-xs font-bold text-white">Self-Powered</div>
+                <div class="text-[11px] text-slate-400">No electricity or water needed</div>
+              </div>
+            </div>
+
+            <div class="col-span-2 sm:col-span-1 bg-dark-800/90 border border-amber-500/30 rounded-xl p-3 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-moon text-sm"></i>
+              </div>
+              <div class="text-left">
+                <div class="text-xs font-bold text-white">24x7 Night Owl</div>
+                <div class="text-[11px] text-slate-400">Available 9 PM - 2 AM</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Action CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            <a href="#booking-calculator" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-sm tracking-wide shadow-xl shadow-cyan-500/25 flex items-center justify-center gap-2 transition-all">
+              <i class="fa-solid fa-calculator"></i>
+              <span>Book Wash & Calculate Cost</span>
+            </a>
+            <a href="#services" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-dark-800 hover:bg-dark-700 border border-slate-700 text-slate-200 font-semibold text-sm flex items-center justify-center gap-2 transition-colors">
+              <span>View Plans (₹400 / ₹600)</span>
+              <i class="fa-solid fa-arrow-down text-xs text-cyan-400"></i>
+            </a>
+          </div>
+
+          <!-- Quick Social Proof Metric -->
+          <div class="flex items-center justify-center lg:justify-start gap-4 pt-2 text-xs text-slate-400">
+            <div class="flex -space-x-2">
+              <img class="inline-block h-7 w-7 rounded-full ring-2 ring-dark-900 object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Customer avatar 1">
+              <img class="inline-block h-7 w-7 rounded-full ring-2 ring-dark-900 object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Customer avatar 2">
+              <img class="inline-block h-7 w-7 rounded-full ring-2 ring-dark-900 object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80" alt="Customer avatar 3">
+            </div>
+            <div>
+              <div class="flex text-amber-400 text-[11px]">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <span>Trusted by 450+ car owners in Model Town & Sector 14</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Quick Card Preview -->
+        <div class="lg:col-span-5">
+          <div class="relative glass-card rounded-2xl p-6 shadow-2xl border border-slate-700/80">
+            <!-- Floating Deal Banner -->
+            <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold text-xs uppercase px-3 py-1 rounded-full shadow-lg">
+              Neighbor Group Offer
+            </div>
+
+            <div class="flex items-center justify-between border-b border-slate-700/60 pb-4 mb-5">
+              <div>
+                <h2 class="text-sm font-bold text-white uppercase tracking-wider">Fast WhatsApp Dispatch</h2>
+                <p class="text-xs text-slate-400">Doorstep wash van arrives at your pin</p>
+              </div>
+              <span class="inline-flex items-center gap-1.5 text-xs text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Crew Ready
+              </span>
+            </div>
+
+            <!-- Fast Selector Snapshot -->
+            <div class="space-y-4 text-xs">
+              <div class="bg-dark-800/80 p-3 rounded-xl border border-slate-700 flex items-center justify-between">
+                <div>
+                  <div class="text-slate-400">Normal Cleaning</div>
+                  <div class="font-bold text-white text-sm">₹400 <span class="text-[10px] text-slate-400 font-normal">/ vehicle</span></div>
+                </div>
+                <span class="text-[11px] bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded font-mono">20 Mins</span>
+              </div>
+
+              <div class="bg-dark-800/80 p-3 rounded-xl border border-cyan-500/40 flex items-center justify-between bg-cyan-950/20">
+                <div>
+                  <div class="text-cyan-400 font-semibold flex items-center gap-1">
+                    Premium Detailing <i class="fa-solid fa-crown text-[10px] text-amber-400"></i>
+                  </div>
+                  <div class="font-bold text-white text-sm">₹600 <span class="text-[10px] text-slate-400 font-normal">/ vehicle</span></div>
+                </div>
+                <span class="text-[11px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded font-mono">35 Mins</span>
+              </div>
+
+              <!-- Distance Visit Fee Highlight -->
+              <div class="p-3 rounded-xl bg-gradient-to-r from-slate-800 to-dark-850 border border-slate-700/80 space-y-1">
+                <div class="flex justify-between items-center text-slate-300">
+                  <span class="font-medium">Doorstep Convenience Fee:</span>
+                  <span class="font-bold text-cyan-400" id="hero-fee-display">₹70 (1 Car)</span>
+                </div>
+                <div class="text-[11px] text-emerald-400 flex items-center gap-1">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>Book 3 or 4+ cars together $\rightarrow$ <strong>100% FREE Visit Fee!</strong></span>
+                </div>
+              </div>
+
+              <a href="#booking-calculator" class="block w-full text-center py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-dark-900 font-bold text-xs uppercase tracking-wider transition-colors shadow-lg shadow-cyan-500/20">
+                Configure My Wash
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Doorstep Section (Hisar Ground Realities) -->
+  <section class="py-12 bg-dark-850 border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-cyan-400">Ground-Level Reality</h2>
+        <h3 class="text-2xl sm:text-3xl font-extrabold font-display text-white mt-1">Why Doorstep Wash Beats Local Ramps in Hisar</h3>
+        <p class="text-slate-400 text-xs sm:text-sm mt-2">Compare what happens at the Auto Market / Petrol Pump vs Our Doorstep Crew</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <!-- The Old Way -->
+        <div class="bg-dark-900/80 border border-rose-950/60 rounded-2xl p-6 relative">
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold text-rose-400 bg-rose-500/10 px-2.5 py-1 rounded-md mb-4">
+            <i class="fa-solid fa-triangle-exclamation"></i> Old Way (Washing Bay / Auto Market)
+          </div>
+          <ul class="space-y-3.5 text-xs text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-xmark text-rose-400 mt-0.5"></i>
+              <span><strong>1.5 to 2 Hours Wasted:</strong> Driving through Hisar traffic, waiting in dusty queues while sweating in plastic chairs.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-xmark text-rose-400 mt-0.5"></i>
+              <span><strong>Swirl Marks & Paint Scratches:</strong> Same muddy rag used on the underbody is used on your bonnet and windshield.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-xmark text-rose-400 mt-0.5"></i>
+              <span><strong>Shuts Down at 7:30 PM:</strong> Impossible to get your vehicle washed late night after highway travel.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-xmark text-rose-400 mt-0.5"></i>
+              <span><strong>Fuel Wasted:</strong> Burning ₹100 of petrol simply driving back and forth to the service station.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- The Hisar Car Care Way -->
+        <div class="bg-gradient-to-b from-cyan-950/30 to-dark-900 border border-cyan-500/40 rounded-2xl p-6 relative shadow-lg shadow-cyan-950/40">
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-300 bg-cyan-500/10 px-2.5 py-1 rounded-md mb-4">
+            <i class="fa-solid fa-check-double text-cyan-400"></i> The Hisar Car Care Method
+          </div>
+          <ul class="space-y-3.5 text-xs text-slate-200">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-cyan-400 mt-0.5 font-bold"></i>
+              <span><strong>Zero Time Wasted:</strong> Van comes to your porch or clinic. You enjoy tea or work while we shine your car.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-cyan-400 mt-0.5 font-bold"></i>
+              <span><strong>100% Paint-Safe:</strong> Separate 600 GSM microfibers for glass, paint, and wheels. Scratch-free snow foam.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-cyan-400 mt-0.5 font-bold"></i>
+              <span><strong>24x7 Night Shift On-Call:</strong> Returned from Delhi or Sirsa at 11 PM? We clean it overnight before morning.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-cyan-400 mt-0.5 font-bold"></i>
+              <span><strong>Zero Household Utility Needed:</strong> We bring our own 400L pure water tank & silent generator.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services & Pricing Section -->
+  <section id="services" class="py-16 md:py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Clear & Transparent Pricing</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-white mt-1">Select Your Detailing Package</h2>
+        <p class="text-slate-400 text-sm mt-2">
+          Strictly pure cleaning & detailing. No messy engine wrenches, no mechanical grease.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        
+        <!-- Normal Cleaning (₹400) -->
+        <div class="glass-card rounded-2xl p-7 border border-slate-700/80 flex flex-col justify-between hover:border-slate-500 transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold text-slate-300 uppercase tracking-wider bg-slate-800 px-3 py-1 rounded-full border border-slate-700">Daily Maintenance</span>
+              <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i> ~20 Mins</span>
+            </div>
+            
+            <h3 class="text-xl font-bold text-white font-display">Normal Cleaning</h3>
+            <p class="text-xs text-slate-400 mt-1">Ideal for weekly maintenance and thorough dust extraction.</p>
+            
+            <div class="mt-6 mb-6">
+              <div class="flex items-baseline">
+                <span class="text-4xl font-extrabold text-white">₹400</span>
+                <span class="text-xs text-slate-400 ml-2">/ vehicle</span>
+              </div>
+              <p class="text-[11px] text-cyan-400 mt-1">+ nominal visit fee (waived on 3+ cars)</p>
+            </div>
+
+            <div class="border-t border-slate-800 pt-5 space-y-3 text-xs text-slate-300">
+              <div class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-cyan-400 text-sm"></i>
+                <span>High-Pressure Underbody & Wheel Arch Mud Flush</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-cyan-400 text-sm"></i>
+                <span>Thick Snow Foam Bath (pH Neutral)</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-cyan-400 text-sm"></i>
+                <span>Soft Microfiber Mitt Hand Wash & De-grime</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-cyan-400 text-sm"></i>
+                <span>Full Cabin & Boot High-Power Vacuuming</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-cyan-400 text-sm"></i>
+                <span>Rubber & Carpet Foot Mats Deep Wash & Air Dry</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-cyan-400 text-sm"></i>
+                <span>Streak-Free Windshield & Window Glass Buff</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-8">
+            <button onclick="selectPackageFromCard('normal')" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white font-semibold text-xs tracking-wider uppercase transition-colors">
+              Choose Normal (₹400)
+            </button>
+          </div>
+        </div>
+
+        <!-- Premium Detailing (₹600) -->
+        <div class="glass-card rounded-2xl p-7 border-2 border-cyan-500/60 relative flex flex-col justify-between shadow-xl shadow-cyan-950/40">
+          <!-- Recommended Badge -->
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-[11px] uppercase tracking-wider px-4 py-1 rounded-full shadow-lg">
+            Most Popular Choice
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold text-cyan-300 uppercase tracking-wider bg-cyan-500/20 px-3 py-1 rounded-full border border-cyan-500/40">Showroom Glow</span>
+              <span class="text-xs text-cyan-400"><i class="fa-regular fa-clock mr-1"></i> ~35 Mins</span>
+            </div>
+            
+            <h3 class="text-xl font-bold text-white font-display flex items-center gap-2">
+              Premium Detailing <i class="fa-solid fa-sparkles text-amber-400"></i>
+            </h3>
+            <p class="text-xs text-slate-300 mt-1">Deep sanitization, stain removal, and hydrophobic paint glow.</p>
+            
+            <div class="mt-6 mb-6">
+              <div class="flex items-baseline">
+                <span class="text-4xl font-extrabold text-white">₹600</span>
+                <span class="text-xs text-slate-400 ml-2">/ vehicle</span>
+              </div>
+              <p class="text-[11px] text-emerald-400 mt-1">+ nominal visit fee (waived on 3+ cars)</p>
+            </div>
+
+            <div class="border-t border-slate-800 pt-5 space-y-3 text-xs text-slate-200">
+              <div class="flex items-center gap-2.5 font-medium text-cyan-300">
+                <i class="fa-solid fa-plus text-xs"></i>
+                <span>Includes EVERYTHING in Normal Cleaning PLUS:</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-cyan-400 text-sm"></i>
+                <span>AC Vent Antimicrobial Sanitization & Crevice Brushing</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-cyan-400 text-sm"></i>
+                <span>Seat & Upholstery Deep Spot Stain Extraction</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-cyan-400 text-sm"></i>
+                <span>Dashboard & Console Anti-Static UV Protection Glaze</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-cyan-400 text-sm"></i>
+                <span>High-Gloss Hydrophobic Body Spray-Wax & Paint Seal</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-cyan-400 text-sm"></i>
+                <span>Deep Black Wet-Look Tire Shield & Rim De-grease</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-8">
+            <button onclick="selectPackageFromCard('premium')" class="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-xs tracking-wider uppercase transition-all shadow-lg shadow-cyan-500/25">
+              Choose Premium (₹600)
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Visit Fee Explanation Card -->
+      <div class="mt-10 max-w-4xl mx-auto bg-dark-800/90 border border-slate-700 rounded-2xl p-6">
+        <h3 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
+          <i class="fa-solid fa-route text-cyan-400"></i> How Our Doorstep Visit Fee Works in Hisar
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4 text-xs">
+          <div class="p-3 rounded-xl bg-dark-900 border border-slate-700/80">
+            <div class="text-slate-400">1 Car Booking</div>
+            <div class="text-lg font-bold text-white mt-1">₹70 Visit Fee</div>
+            <div class="text-[11px] text-slate-400 mt-1">Covers van transit & dedicated setup at your gate.</div>
+          </div>
+          <div class="p-3 rounded-xl bg-dark-900 border border-slate-700/80">
+            <div class="text-slate-400">2 Cars Together</div>
+            <div class="text-lg font-bold text-cyan-400 mt-1">₹40 / car (₹80 total)</div>
+            <div class="text-[11px] text-slate-400 mt-1">Reduced fee for family or neighbor pairing.</div>
+          </div>
+          <div class="p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/50">
+            <div class="text-emerald-400 font-semibold">3 or 4+ Cars Batch</div>
+            <div class="text-lg font-bold text-emerald-300 mt-1">100% FREE VISIT (₹0)</div>
+            <div class="text-[11px] text-emerald-200/80 mt-1">Group with your street or office parking & save entirely!</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Booking & Price Calculator Section -->
+  <section id="booking-calculator" class="py-16 bg-dark-850 border-t border-slate-800 relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Instant Estimate & WhatsApp Dispatch</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold font-display text-white mt-1">Configure & Book Your Wash</h2>
+        <p class="text-slate-400 text-xs sm:text-sm mt-1">Select your car count to watch the visit fee drop to ZERO!</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Booking Form Controls -->
+        <div class="lg:col-span-7 space-y-6 glass-card p-6 rounded-2xl border border-slate-700/80">
+          
+          <!-- Step 1: Vehicle Type -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2.5">
+              1. Select Vehicle Category
+            </label>
+            <div class="grid grid-cols-3 sm:grid-cols-5 gap-2 text-center text-xs" id="vehicle-type-selector">
+              <button type="button" onclick="setVehicleType('Hatchback', this)" class="vehicle-btn p-2.5 rounded-xl border border-slate-700 bg-dark-800 hover:border-cyan-500 text-slate-200 active-vehicle-btn border-cyan-400 bg-cyan-950/40 text-cyan-300">
+                <i class="fa-solid fa-car-side block text-base mb-1"></i>
+                <span class="text-[11px]">Hatchback</span>
+              </button>
+              <button type="button" onclick="setVehicleType('Sedan', this)" class="vehicle-btn p-2.5 rounded-xl border border-slate-700 bg-dark-800 hover:border-cyan-500 text-slate-200">
+                <i class="fa-solid fa-car block text-base mb-1"></i>
+                <span class="text-[11px]">Sedan</span>
+              </button>
+              <button type="button" onclick="setVehicleType('Compact SUV', this)" class="vehicle-btn p-2.5 rounded-xl border border-slate-700 bg-dark-800 hover:border-cyan-500 text-slate-200">
+                <i class="fa-solid fa-truck-monster block text-base mb-1"></i>
+                <span class="text-[11px]">Compact SUV</span>
+              </button>
+              <button type="button" onclick="setVehicleType('Full SUV (Fortuner/Scorpio)', this)" class="vehicle-btn p-2.5 rounded-xl border border-slate-700 bg-dark-800 hover:border-cyan-500 text-slate-200">
+                <i class="fa-solid fa-truck-pickup block text-base mb-1"></i>
+                <span class="text-[11px]">Full SUV</span>
+              </button>
+              <button type="button" onclick="setVehicleType('Luxury', this)" class="vehicle-btn p-2.5 rounded-xl border border-slate-700 bg-dark-800 hover:border-cyan-500 text-slate-200">
+                <i class="fa-solid fa-gem block text-base mb-1"></i>
+                <span class="text-[11px]">Luxury</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Wash Package Selector -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2.5">
+              2. Detailing Package
+            </label>
+            <div class="grid grid-cols-2 gap-3" id="package-selector">
+              <button type="button" onclick="setPackage('normal', 400, this)" class="package-btn p-3.5 rounded-xl border border-slate-700 bg-dark-800 text-left transition-all">
+                <div class="flex justify-between items-center">
+                  <span class="font-bold text-white text-xs">Normal Clean</span>
+                  <span class="text-sm font-extrabold text-cyan-400">₹400</span>
+                </div>
+                <p class="text-[11px] text-slate-400 mt-1">Foam wash + Vacuum + Mats</p>
+              </button>
+
+              <button type="button" onclick="setPackage('premium', 600, this)" class="package-btn p-3.5 rounded-xl border border-cyan-400 bg-cyan-950/40 text-left transition-all active-pkg-btn">
+                <div class="flex justify-between items-center">
+                  <span class="font-bold text-white text-xs flex items-center gap-1">
+                    Premium <i class="fa-solid fa-crown text-[10px] text-amber-400"></i>
+                  </span>
+                  <span class="text-sm font-extrabold text-cyan-300">₹600</span>
+                </div>
+                <p class="text-[11px] text-slate-300 mt-1">+ AC vents + Body wax + UV polish</p>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3: Multi-Car Quantity Counter (Triggers Fee Waiver) -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <label class="text-xs font-bold uppercase tracking-wider text-slate-300">
+                3. Number of Cars to Wash (Same Address/Lane)
+              </label>
+              <span id="waiver-pill" class="text-[11px] px-2.5 py-0.5 rounded-full font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                Add 2 more for FREE visit!
+              </span>
+            </div>
+
+            <div class="flex items-center space-x-3 bg-dark-800 p-2 rounded-xl border border-slate-700">
+              <button type="button" onclick="changeCarCount(-1)" class="w-10 h-10 rounded-lg bg-slate-700 hover:bg-slate-600 text-white font-bold flex items-center justify-center text-base">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <div class="flex-1 text-center">
+                <span id="car-count-display" class="text-xl font-extrabold font-display text-white">1</span>
+                <span class="text-xs text-slate-400 ml-1">Car(s)</span>
+              </div>
+              <button type="button" onclick="changeCarCount(1)" class="w-10 h-10 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-dark-900 font-bold flex items-center justify-center text-base">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 4: Time Slot & Locality -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="slot-select" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
+                4. Select Preferred Slot
+              </label>
+              <select id="slot-select" onchange="updateBookingData()" class="w-full bg-dark-800 border border-slate-700 rounded-xl p-3 text-xs text-slate-200 focus:outline-none focus:border-cyan-400">
+                <option value="Morning (7:30 AM - 11:30 AM)">Morning (7:30 AM - 11:30 AM)</option>
+                <option value="Afternoon (12:00 PM - 4:00 PM)">Afternoon (12:00 PM - 4:00 PM)</option>
+                <option value="Evening (4:30 PM - 8:00 PM)">Evening (4:30 PM - 8:00 PM)</option>
+                <option value="Night Owl Special (9:00 PM - 2:00 AM)">Night Owl Special (9:00 PM - 2:00 AM)</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="locality-select" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
+                5. Hisar Locality / Sector
+              </label>
+              <select id="locality-select" onchange="updateBookingData()" class="w-full bg-dark-800 border border-slate-700 rounded-xl p-3 text-xs text-slate-200 focus:outline-none focus:border-cyan-400">
+                <option value="Sector 14">Sector 14</option>
+                <option value="Sector 13">Sector 13</option>
+                <option value="Model Town">Model Town</option>
+                <option value="Urban Estate II">Urban Estate II</option>
+                <option value="PLA (Pranami Mandir Area)">PLA Area</option>
+                <option value="Sector 9-11">Sector 9-11</option>
+                <option value="Delhi Road (Offices/Clinics)">Delhi Road Hub</option>
+                <option value="Dabra Chowk / Dabra Road">Dabra Chowk & Road</option>
+                <option value="Rajgarh Road / Cantt Area">Rajgarh Road / Cantt</option>
+                <option value="Other Area in Hisar">Other Area (Hisar Outskirts)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Step 5: Customer Details -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="cust-name" class="block text-xs font-medium text-slate-300 mb-1">Your Name</label>
+              <input type="text" id="cust-name" placeholder="e.g. Vikas Sharma" class="w-full bg-dark-800 border border-slate-700 rounded-xl p-3 text-xs text-slate-200 focus:outline-none focus:border-cyan-400">
+            </div>
+            <div>
+              <label for="cust-phone" class="block text-xs font-medium text-slate-300 mb-1">WhatsApp / Phone Number</label>
+              <input type="tel" id="cust-phone" placeholder="e.g. 98120XXXXX" class="w-full bg-dark-800 border border-slate-700 rounded-xl p-3 text-xs text-slate-200 focus:outline-none focus:border-cyan-400">
+            </div>
+          </div>
+
+          <div>
+            <label for="cust-address" class="block text-xs font-medium text-slate-300 mb-1">House / Gate / Landmark Address</label>
+            <input type="text" id="cust-address" placeholder="e.g. House #142, Street 4, Near Community Centre" class="w-full bg-dark-800 border border-slate-700 rounded-xl p-3 text-xs text-slate-200 focus:outline-none focus:border-cyan-400">
+          </div>
+
+        </div>
+
+        <!-- Right: Live Bill & Dispatch Action -->
+        <div class="lg:col-span-5 sticky top-24">
+          <div class="glass-card rounded-2xl p-6 border-2 border-cyan-500/50 shadow-2xl relative">
+            
+            <div class="flex items-center justify-between pb-4 border-b border-slate-700/80">
+              <h3 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-receipt text-cyan-400"></i> Live Booking Estimate
+              </h3>
+              <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded font-mono">Real-Time</span>
+            </div>
+
+            <!-- Itemized Calculation -->
+            <div class="py-5 space-y-3.5 text-xs">
+              <div class="flex justify-between items-center text-slate-300">
+                <span>Selected Package:</span>
+                <span class="font-bold text-white" id="bill-pkg-name">Premium Detailing (₹600)</span>
+              </div>
+
+              <div class="flex justify-between items-center text-slate-300">
+                <span>Vehicle Count:</span>
+                <span class="font-bold text-white" id="bill-car-qty">1 Vehicle</span>
+              </div>
+
+              <div class="flex justify-between items-center text-slate-300">
+                <span>Base Cleaning Cost:</span>
+                <span class="font-mono font-bold text-white" id="bill-base-cost">₹600</span>
+              </div>
+
+              <!-- Visit Fee Line Item with Dynamic Badge -->
+              <div class="flex justify-between items-center p-2.5 rounded-lg bg-dark-800 border border-slate-700">
+                <div>
+                  <div class="text-slate-300 font-medium">Doorstep Visit Fee:</div>
+                  <div class="text-[10px] text-slate-400" id="bill-fee-desc">1 Car standard visit</div>
+                </div>
+                <div class="text-right">
+                  <span class="font-mono font-bold text-cyan-400 text-sm" id="bill-fee-amount">₹70</span>
+                  <div class="text-[10px] text-emerald-400 font-bold hidden" id="free-fee-badge">100% FREE!</div>
+                </div>
+              </div>
+
+              <!-- Highlight Banner if Waiver is close -->
+              <div id="waiver-incentive-box" class="p-2.5 rounded-lg bg-blue-950/40 border border-blue-500/30 text-[11px] text-cyan-300">
+                <i class="fa-solid fa-lightbulb text-amber-400 mr-1"></i>
+                <span id="waiver-incentive-text">Group 3 or more cars with a neighbor to make your visit fee ₹0!</span>
+              </div>
+
+              <!-- Grand Total -->
+              <div class="border-t border-slate-700/80 pt-4 flex justify-between items-baseline">
+                <div>
+                  <span class="text-xs font-semibold text-slate-400 block">Total Payable at Doorstep</span>
+                  <span class="text-[10px] text-emerald-400">Cash / UPI after full satisfaction</span>
+                </div>
+                <div class="text-right">
+                  <span class="text-3xl font-extrabold font-display text-white tracking-tight" id="bill-grand-total">₹670</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Booking Buttons -->
+            <div class="space-y-3 pt-2">
+              <button onclick="dispatchWhatsAppBooking()" class="w-full py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-dark-900 font-extrabold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/25 transition-all">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Confirm & Send on WhatsApp</span>
+              </button>
+
+              <button onclick="openUPIModal()" class="w-full py-2.5 rounded-xl bg-dark-800 hover:bg-dark-700 border border-slate-700 text-slate-300 font-semibold text-xs flex items-center justify-center gap-2 transition-colors">
+                <i class="fa-solid fa-qrcode text-cyan-400"></i>
+                <span>Preview UPI QR / Payment Option</span>
+              </button>
+            </div>
+
+            <p class="text-[10px] text-slate-400 text-center mt-3">
+              <i class="fa-solid fa-shield-halved text-cyan-400"></i> Pay only after you inspect the car and sign off.
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Before / After Visual Comparison -->
+  <section id="before-after" class="py-16 md:py-24 border-t border-slate-800 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Real Hisar Transformations</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-white mt-1">See the Showroom Difference</h2>
+        <p class="text-slate-400 text-xs sm:text-sm mt-2">Drag the slider horizontally to compare highway dust vs our hydrophobic foam shine.</p>
+      </div>
+
+      <div class="max-w-3xl mx-auto">
+        <div class="comparison-container rounded-2xl shadow-2xl border border-slate-700 h-[280px] sm:h-[400px]" id="slider-box">
+          <!-- After Image (Clean) -->
+          <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1200&q=80" alt="Spotless polished luxury car in Hisar" class="w-full h-full object-cover">
+          <div class="absolute bottom-4 right-4 bg-emerald-500/90 text-dark-900 font-extrabold text-xs px-3 py-1 rounded-md uppercase tracking-wider">
+            AFTER: Hydrophobic Shine
+          </div>
+
+          <!-- Before Overlay (Dusty/Muddy) -->
+          <div class="comparison-overlay w-1/2" id="slider-overlay">
+            <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1200&q=80" alt="Dusty dirty car before wash" class="absolute top-0 left-0 max-w-none h-full object-cover filter contrast-125 sepia-[0.3]" style="width: 100%;">
+            <div class="absolute bottom-4 left-4 bg-slate-900/90 text-rose-400 font-extrabold text-xs px-3 py-1 rounded-md uppercase tracking-wider">
+              BEFORE: Highway Dust & Mud
+            </div>
+          </div>
+
+          <!-- Slider Range Control -->
+          <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30" id="before-after-range" oninput="handleSliderChange(this.value)">
+
+          <!-- Visual Divider Line -->
+          <div class="absolute top-0 bottom-0 w-1 bg-cyan-400 pointer-events-none shadow-[0_0_10px_#06b6d4]" id="slider-divider" style="left: 50%;">
+            <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-cyan-400 text-dark-900 flex items-center justify-center font-bold text-xs shadow-lg">
+              <i class="fa-solid fa-arrows-left-right text-xs"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4 text-xs text-slate-400 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-hand-pointer text-cyan-400"></i>
+          <span>Drag left or right on the image to inspect finish</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Coverage Area (Hisar Focus) -->
+  <section id="coverage" class="py-16 bg-dark-850 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Hyper-Local Hisar Network</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold font-display text-white mt-1">Sectors We Reach in 20 Minutes</h2>
+        <p class="text-slate-400 text-xs sm:text-sm mt-1">Our mobile units are strategically positioned around city hubs for rapid response.</p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 text-center text-xs">
+        <div class="p-3.5 rounded-xl bg-dark-900 border border-cyan-500/30">
+          <div class="font-bold text-white">Sector 14</div>
+          <div class="text-[10px] text-cyan-400 mt-0.5">Core Hub (0 km)</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-dark-900 border border-cyan-500/30">
+          <div class="font-bold text-white">Model Town</div>
+          <div class="text-[10px] text-cyan-400 mt-0.5">Daily Morning Cluster</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-dark-900 border border-cyan-500/30">
+          <div class="font-bold text-white">Sector 13</div>
+          <div class="text-[10px] text-cyan-400 mt-0.5">Rapid Dispatch</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-dark-900 border border-cyan-500/30">
+          <div class="font-bold text-white">Urban Estate II</div>
+          <div class="text-[10px] text-cyan-400 mt-0.5">Afternoon Batching</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-dark-900 border border-slate-700">
+          <div class="font-bold text-white">PLA Area</div>
+          <div class="text-[10px] text-slate-400 mt-0.5">Everyday Route</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-dark-900 border border-slate-700">
+          <div class="font-bold text-white">Sector 9-11</div>
+          <div class="text-[10px] text-slate-400 mt-0.5">On-demand</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-dark-900 border border-slate-700">
+          <div class="font-bold text-white">Delhi Road Hub</div>
+          <div class="text-[10px] text-slate-400 mt-0.5">Clinics & Offices</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-dark-900 border border-slate-700">
+          <div class="font-bold text-white">Dabra Chowk</div>
+          <div class="text-[10px] text-slate-400 mt-0.5">Full Day Coverage</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-dark-900 border border-slate-700">
+          <div class="font-bold text-white">Rajgarh Road</div>
+          <div class="text-[10px] text-slate-400 mt-0.5">Regular Visits</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-dark-900 border border-slate-700">
+          <div class="font-bold text-white">Cantt Area</div>
+          <div class="text-[10px] text-slate-400 mt-0.5">On-Call Doorstep</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-dark-900 border border-slate-700">
+          <div class="font-bold text-white">Industrial Area</div>
+          <div class="text-[10px] text-slate-400 mt-0.5">Fleet Cleaning</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-emerald-950/40 border border-emerald-500/30">
+          <div class="font-bold text-emerald-300">Outer Farmhouses</div>
+          <div class="text-[10px] text-emerald-400 mt-0.5">Batch Bookings</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQs Section -->
+  <section id="faqs" class="py-16 border-t border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Got Questions?</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold font-display text-white mt-1">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="space-y-4 text-xs">
+        <!-- FAQ 1 -->
+        <div class="glass-card rounded-xl p-5 border border-slate-700/80">
+          <h4 class="font-bold text-white text-sm flex items-center gap-2">
+            <i class="fa-solid fa-circle-question text-cyan-400"></i>
+            Do you need electricity or a water tap from my house?
+          </h4>
+          <p class="text-slate-300 mt-2 leading-relaxed">
+            No, not at all! Our mobile van is 100% self-sufficient. We carry our own 400-litre clean water storage tank, an industrial pressure washer, and an onboard silent petrol generator. You don't have to provide anything.
+          </p>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="glass-card rounded-xl p-5 border border-slate-700/80">
+          <h4 class="font-bold text-white text-sm flex items-center gap-2">
+            <i class="fa-solid fa-circle-question text-cyan-400"></i>
+            How does the 100% FREE visit fee work for 3 or 4+ cars?
+          </h4>
+          <p class="text-slate-300 mt-2 leading-relaxed">
+            For 1 car, our visit fee is ₹70. For 2 cars, it drops to ₹40 per car. However, if you and your neighbor, joint family, or office colleagues book <strong>3 or more cars together</strong> at the same parking area or lane, the visit fee is waived completely (₹0)!
+          </p>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="glass-card rounded-xl p-5 border border-slate-700/80">
+          <h4 class="font-bold text-white text-sm flex items-center gap-2">
+            <i class="fa-solid fa-circle-question text-cyan-400"></i>
+            Will your night-time service (9 PM – 2 AM) disturb the neighbors?
+          </h4>
+          <p class="text-slate-300 mt-2 leading-relaxed">
+            No. For quiet residential night calls in sectors like Model Town or Sector 14, we carry a 30-meter high-gauge silent electrical cord so we can plug in quietly, or we employ specialized low-noise washing techniques so your neighbors sleep undisturbed.
+          </p>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="glass-card rounded-xl p-5 border border-slate-700/80">
+          <h4 class="font-bold text-white text-sm flex items-center gap-2">
+            <i class="fa-solid fa-circle-question text-cyan-400"></i>
+            Do you do any mechanical repairs, engine tuning, or denting?
+          </h4>
+          <p class="text-slate-300 mt-2 leading-relaxed">
+            No. We specialize strictly in <strong>100% Paint-Safe Cleaning, Detailing, and Sanitization</strong>. We never touch messy greasy engine parts, which guarantees your car gets pure aesthetic attention without risk of mechanical damage.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- UPI Payment Preview Modal -->
+  <div id="upi-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-dark-850 border border-slate-700 rounded-2xl max-w-sm w-full p-6 text-center relative shadow-2xl">
+      <button onclick="closeUPIModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-base">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="w-12 h-12 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center mx-auto mb-3 text-xl">
+        <i class="fa-solid fa-qrcode"></i>
+      </div>
+
+      <h3 class="text-base font-bold text-white font-display">Pay on Service Completion</h3>
+      <p class="text-xs text-slate-400 mt-1">Inspect your shiny car before you scan. We accept all UPI apps.</p>
+
+      <!-- Simulated QR Code -->
+      <div class="bg-white p-4 rounded-xl inline-block my-5 shadow-lg">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=upi://pay?pa=hisarcarcare@upi&pn=HisarDoorstepCarCare&cu=INR" alt="UPI Payment QR Code" class="w-36 h-36 mx-auto">
+      </div>
+
+      <div class="text-xs font-mono text-cyan-300 bg-dark-900 py-1.5 px-3 rounded-lg border border-slate-800 mb-4">
+        UPI ID: hisarcarcare@upi
+      </div>
+
+      <p class="text-[11px] text-slate-400 leading-tight">
+        You can pay our crew via Google Pay, PhonePe, Paytm, or Cash directly on your driveway after the wash.
+      </p>
+
+      <button onclick="closeUPIModal()" class="w-full mt-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs transition-colors">
+        Close Preview
+      </button>
+    </div>
+  </div>
+
+  <!-- Sticky Mobile Bottom Bar (Always Accessible on Phone) -->
+  <div class="fixed bottom-0 inset-x-0 z-40 bg-dark-900/95 backdrop-blur-lg border-t border-slate-800 p-3 md:hidden flex items-center justify-between gap-3">
+    <div class="flex flex-col">
+      <span class="text-[10px] text-slate-400 uppercase font-semibold">Total Estimate</span>
+      <span class="text-lg font-extrabold text-white font-display" id="mobile-sticky-price">₹670</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <a href="tel:+919876543210" class="p-2.5 rounded-xl bg-dark-800 border border-slate-700 text-cyan-400 text-sm">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+      <button onclick="dispatchWhatsAppBooking()" class="px-5 py-2.5 rounded-xl bg-emerald-500 text-dark-900 font-bold text-xs uppercase tracking-wide flex items-center gap-1.5 shadow-lg shadow-emerald-500/20">
+        <i class="fa-brands fa-whatsapp text-sm"></i>
+        <span>Book on WhatsApp</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark-900 border-t border-slate-800/80 py-8 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div>
+        <p class="font-bold text-white text-sm">Hisar Doorstep Car Care (24x7)</p>
+        <p class="text-[11px] text-slate-400 mt-0.5">Sector 14, Model Town & Urban Estate Coverage Hubs, Hisar (HR)</p>
+      </div>
+      <div class="text-[11px] text-slate-400">
+        100% Paint-Safe Cleaning • Zero Mechanical Repairs • Self-Powered Mobile Units
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Global booking state
+    const bookingState = {
+      vehicleType: 'Hatchback',
+      packageType: 'premium', // 'normal' (400) or 'premium' (600)
+      packagePrice: 600,
+      carCount: 1,
+      slot: 'Morning (7:30 AM - 11:30 AM)',
+      locality: 'Sector 14'
+    };
+
+    // Calculate Visit Fee based on business rules
+    // 1 Car: ₹70
+    // 2 Cars: ₹40 per car (₹80 total)
+    // 3 or 4+ Cars: 100% FREE (₹0)
+    function calculateVisitFee(cars) {
+      if (cars >= 3) {
+        return 0;
+      } else if (cars === 2) {
+        return 80;
+      } else {
+        return 70;
+      }
+    }
+
+    // Update the live bill calculation
+    function renderBill() {
+      const baseCleaning = bookingState.packagePrice * bookingState.carCount;
+      const visitFee = calculateVisitFee(bookingState.carCount);
+      const grandTotal = baseCleaning + visitFee;
+
+      // Update Bill DOM elements
+      document.getElementById('bill-pkg-name').textContent = 
+        `${bookingState.packageType === 'premium' ? 'Premium Detailing (₹600)' : 'Normal Cleaning (₹400)'}`;
+      
+      document.getElementById('bill-car-qty').textContent = 
+        `${bookingState.carCount} ${bookingState.carCount > 1 ? 'Vehicles' : 'Vehicle'} (${bookingState.vehicleType})`;
+
+      document.getElementById('bill-base-cost').textContent = `₹${baseCleaning}`;
+
+      const feeAmountEl = document.getElementById('bill-fee-amount');
+      const feeDescEl = document.getElementById('bill-fee-desc');
+      const freeBadgeEl = document.getElementById('free-fee-badge');
+      const waiverPill = document.getElementById('waiver-pill');
+      const waiverBox = document.getElementById('waiver-incentive-box');
+      const waiverText = document.getElementById('waiver-incentive-text');
+
+      if (visitFee === 0) {
+        feeAmountEl.textContent = '₹0';
+        feeAmountEl.className = 'font-mono font-bold text-emerald-400 text-sm line-through';
+        feeDescEl.textContent = '3+ Cars Neighbor Batch (Visit fee waived!)';
+        freeBadgeEl.classList.remove('hidden');
+        
+        waiverPill.textContent = '🎉 100% FREE Visit Fee Unlocked!';
+        waiverPill.className = 'text-[11px] px-2.5 py-0.5 rounded-full font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40';
+        
+        waiverBox.className = 'p-2.5 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-[11px] text-emerald-300';
+        waiverText.innerHTML = '<strong>Congratulations!</strong> Your visit fee is ₹0 because you booked 3 or more cars together.';
+      } else if (bookingState.carCount === 2) {
+        feeAmountEl.textContent = '₹80';
+        feeAmountEl.className = 'font-mono font-bold text-cyan-400 text-sm';
+        feeDescEl.textContent = '2 Cars (₹40 / car discounted fee)';
+        freeBadgeEl.classList.add('hidden');
+        
+        waiverPill.textContent = 'Add 1 more car for FREE visit!';
+        waiverPill.className = 'text-[11px] px-2.5 py-0.5 rounded-full font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/40';
+
+        waiverBox.className = 'p-2.5 rounded-lg bg-blue-950/40 border border-blue-500/30 text-[11px] text-cyan-300';
+        waiverText.innerHTML = 'Add just 1 more vehicle from your family or neighbor to get a <strong>100% FREE visit</strong>!';
+      } else {
+        feeAmountEl.textContent = '₹70';
+        feeAmountEl.className = 'font-mono font-bold text-cyan-400 text-sm';
+        feeDescEl.textContent = '1 Car standard visit fee';
+        freeBadgeEl.classList.add('hidden');
+
+        waiverPill.textContent = 'Add 2 more for FREE visit!';
+        waiverPill.className = 'text-[11px] px-2.5 py-0.5 rounded-full font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30';
+
+        waiverBox.className = 'p-2.5 rounded-lg bg-blue-950/40 border border-blue-500/30 text-[11px] text-cyan-300';
+        waiverText.innerHTML = 'Group 3 or more cars with a neighbor or colleague to make your visit fee <strong>₹0</strong>!';
+      }
+
+      document.getElementById('bill-grand-total').textContent = `₹${grandTotal}`;
+      document.getElementById('mobile-sticky-price').textContent = `₹${grandTotal}`;
+    }
+
+    // Vehicle Type Selector
+    function setVehicleType(type, buttonElement) {
+      bookingState.vehicleType = type;
+      document.querySelectorAll('.vehicle-btn').forEach(btn => {
+        btn.classList.remove('border-cyan-400', 'bg-cyan-950/40', 'text-cyan-300');
+        btn.classList.add('border-slate-700', 'bg-dark-800', 'text-slate-200');
+      });
+      buttonElement.classList.remove('border-slate-700', 'bg-dark-800', 'text-slate-200');
+      buttonElement.classList.add('border-cyan-400', 'bg-cyan-950/40', 'text-cyan-300');
+      renderBill();
+    }
+
+    // Package Selector
+    function setPackage(type, price, buttonElement) {
+      bookingState.packageType = type;
+      bookingState.packagePrice = price;
+      
+      document.querySelectorAll('.package-btn').forEach(btn => {
+        btn.classList.remove('border-cyan-400', 'bg-cyan-950/40');
+        btn.classList.add('border-slate-700', 'bg-dark-800');
+      });
+      if (buttonElement) {
+        buttonElement.classList.remove('border-slate-700', 'bg-dark-800');
+        buttonElement.classList.add('border-cyan-400', 'bg-cyan-950/40');
+      }
+      renderBill();
+    }
+
+    function selectPackageFromCard(type) {
+      const price = type === 'normal' ? 400 : 600;
+      const targetBtn = document.querySelectorAll('.package-btn')[type === 'normal' ? 0 : 1];
+      setPackage(type, price, targetBtn);
+      
+      // Scroll smoothly to the booking calculator
+      document.getElementById('booking-calculator').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Car Count Counter
+    function changeCarCount(delta) {
+      const newCount = bookingState.carCount + delta;
+      if (newCount >= 1 && newCount <= 10) {
+        bookingState.carCount = newCount;
+        document.getElementById('car-count-display').textContent = newCount;
+        renderBill();
+      }
+    }
+
+    // Update Dropdown Data
+    function updateBookingData() {
+      bookingState.slot = document.getElementById('slot-select').value;
+      bookingState.locality = document.getElementById('locality-select').value;
+      renderBill();
+    }
+
+    // Build Formatted WhatsApp Message and Open Dispatch URL
+    function dispatchWhatsAppBooking() {
+      const name = document.getElementById('cust-name').value.trim() || 'Valued Customer';
+      const phone = document.getElementById('cust-phone').value.trim() || 'Not specified';
+      const address = document.getElementById('cust-address').value.trim() || bookingState.locality;
+      
+      const baseCleaning = bookingState.packagePrice * bookingState.carCount;
+      const visitFee = calculateVisitFee(bookingState.carCount);
+      const grandTotal = baseCleaning + visitFee;
+
+      const messageText = 
+`*🚗 NEW DOORSTEP CAR WASH BOOKING - HISAR*
+---------------------------------------
+*Customer Name:* ${name}
+*Contact Phone:* ${phone}
+*Address / Sector:* ${address} (${bookingState.locality})
+
+*Vehicle Details:*
+• Type: ${bookingState.vehicleType}
+• Number of Cars: ${bookingState.carCount}
+• Selected Package: ${bookingState.packageType === 'premium' ? 'Premium Detailing (₹600)' : 'Normal Cleaning (₹400)'}
+• Preferred Slot: ${bookingState.slot}
+
+*Bill Summary:*
+• Cleaning Subtotal: ₹${baseCleaning}
+• Doorstep Visit Fee: ${visitFee === 0 ? 'FREE (₹0 - 3+ Cars Offer)' : '₹' + visitFee}
+*• Total Payable at Doorstep:* *₹${grandTotal}*
+---------------------------------------
+_Please confirm booking slot and dispatch mobile detailing van._`;
+
+      const encodedMessage = encodeURIComponent(messageText);
+      // Replace with your real business WhatsApp number for Hisar operations
+      const whatsappUrl = `https://wa.me/919876543210?text=${encodedMessage}`;
+      
+      window.open(whatsappUrl, '_blank');
+    }
+
+    // Before/After Slider Handling
+    function handleSliderChange(val) {
+      document.getElementById('slider-overlay').style.width = val + '%';
+      document.getElementById('slider-divider').style.left = val + '%';
+    }
+
+    // Modal Control
+    function openUPIModal() {
+      document.getElementById('upi-modal').classList.remove('hidden');
+    }
+    function closeUPIModal() {
+      document.getElementById('upi-modal').classList.add('hidden');
+    }
+
+    // Initialize on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      renderBill();
+    });
+  </script>
+</body>
+</html>
